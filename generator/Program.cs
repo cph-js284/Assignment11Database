@@ -6,8 +6,9 @@ namespace generator
     {
         static void Main(string[] args)
         {
+            string FileName = "myFile";
             Creator c1 = new Creator();
-            c1.BuildClassDefinitions("specfile.txt");
+            c1.BuildClassDefinitions("specfile.txt", FileName);
         }
     }
 }
