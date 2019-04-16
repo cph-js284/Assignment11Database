@@ -75,7 +75,7 @@ namespace generator
                     switch (attribType)
                     {   
                         case "class":
-                            strres = "\npublic class "+attribName+" " + "{";
+                            strres = "\npublic class "+attribName+" " + "{\n public int " + attribName + "_id {get; set; }";
                             sw.WriteLine(strres);
                             break;
 
@@ -112,7 +112,7 @@ namespace generator
             switch (type)
             {
                 case "1":
-                    res = dirty.Replace(" ","").Replace("\t","").Replace("\r\n","").Replace("}}","");
+                    res = dirty.Replace(" ","").Replace("\t","").Replace("\n","").Replace("}}","");
                     break;
                 case "2":
                     res = dirty.Replace("\"","").Replace(":","");

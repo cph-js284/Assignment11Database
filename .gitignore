@@ -1,3 +1,6 @@
 generator/bin/
 generator/obj/
 generator/.vscode
+ORM/bin/
+ORM/obj/
+ORM/.vscode
