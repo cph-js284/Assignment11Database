@@ -74,12 +74,12 @@ That takes care of the MySql setup, you can exit out of the shell and container(
 ```
 sudo docker build -t orm01 .
 ```
-2) Run the image
+2) Run the image<br>
+NB this command spits out all the queries in one go.<br>
+The output from the ORM have been captured in the file [output.txt](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/output.txt) found in the 'output' folder<br>
 ```
 sudo docker run --name ohohorm01 --link mysql01:mysql orm01
 ```
-
-The output from the ORM have been captured in the file [output.txt](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/output.txt) found in the 'output' folder
 
 # Cleanup
 To remove the container 
