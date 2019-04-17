@@ -27,5 +27,8 @@ sudo docker run --name mygen01 generator
 sudo docker cp mygen01:/app/Generated.sql ./Generated.sql
 sudo docker cp mygen01:/app/Generated.cs ./Generated.cs
 ```
-NB you might get a permission denied when doing this copy
-
+NB you might get a permission denied when doing this copy, if that is the case you can grant permission 
+```
+sudo chmod  a+rw
+```
+*Alternativly you can run the generator container indetached mode and enter it using bash and then copy out the 2 file, or even better you can just check out the files here [Generated.sql](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.sql) and [Generated.cs](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.cs)* <br>
