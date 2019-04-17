@@ -1,0 +1,99 @@
+------------------------------------------------------
+Testing ORM query : Customer
+Created : SELECT * FROM Customer_tbl
+----------------------RESULT--------------------------
+Customer_id : 1
+name : Tom
+Order_id : 1
+Customer_id : 2
+name : Eva
+Order_id : 2
+Customer_id : 3
+name : Joe
+Order_id : 3
+------------------------------------------------------
+Testing ORM query : Customer.name
+Created : SELECT name FROM Customer_tbl
+----------------------RESULT--------------------------
+name : Tom
+name : Eva
+name : Joe
+------------------------------------------------------
+Testing ORM query : Product.name
+Created : SELECT name FROM Product_tbl
+----------------------RESULT--------------------------
+name : product1
+name : product2
+name : product3
+name : product4
+name : product5
+name : product6
+name : product7
+------------------------------------------------------
+Testing ORM query : (Customer|name='Joe')
+Created : SELECT * FROM Customer_tbl where name='Joe'
+----------------------RESULT--------------------------
+Customer_id : 3
+name : Joe
+Order_id : 3
+------------------------------------------------------
+Testing ORM query : (Product|name='Product3')
+Created : SELECT * FROM Product_tbl where name='Product3'
+----------------------RESULT--------------------------
+Product_id : 3
+name : product3
+price : 300
+------------------------------------------------------
+Testing ORM query : (Product|price > 200 and price < 600)
+Created : SELECT * FROM Product_tbl where price > 200 and price < 600
+----------------------RESULT--------------------------
+Product_id : 3
+name : product3
+price : 300
+Product_id : 4
+name : product4
+price : 400
+Product_id : 5
+name : product5
+price : 500
+------------------------------------------------------
+Testing ORM query : (Customer|name='Joe').Order
+Created : SELECT * FROM Customer_tbl  left join Order_tbl on Customer_tbl.Order_id = Order_tbl.Order_id where name='Joe'
+----------------------RESULT--------------------------
+Customer_id : 3
+name : Joe
+Order_id : 3
+Order_id : 3
+date : 3-1-2019
+total : 6100
+customer_id : 3
+OrderLine_id : 3
+------------------------------------------------------
+Testing ORM query : (Customer|name='Joe').Order.OrderLine
+Created : SELECT * FROM Customer_tbl  left join Order_tbl on Customer_tbl.Order_id = Order_tbl.Order_id left join OrderLine_tbl on Order_tbl.OrderLine_id = OrderLine_tbl.OrderLine_id where name='Joe'
+----------------------RESULT--------------------------
+Customer_id : 3
+name : Joe
+Order_id : 3
+Order_id : 3
+date : 3-1-2019
+total : 6100
+customer_id : 3
+OrderLine_id : 3
+OrderLine_id : 3
+order_id : 1
+product_id : 1
+count : 4
+total : 400
+------------------------------------------------------
+Testing ORM query : (Order| total > 14000).Customer
+Created : SELECT * FROM Order_tbl  left join Customer_tbl on Order_tbl.Customer_id = Customer_tbl.Customer_id where  total > 14000
+----------------------RESULT--------------------------
+Order_id : 2
+date : 2-1-2019
+total : 15000
+customer_id : 2
+OrderLine_id : 2
+Customer_id : 2
+name : Eva
+Order_id : 2

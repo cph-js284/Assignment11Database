@@ -8,9 +8,9 @@ insert into Product_tbl (name, price) values ('product5', 500);
 insert into Product_tbl (name, price) values ('product6', 600);
 insert into Product_tbl (name, price) values ('product7', 700);
 
-insert into Customer_tbl (name, order_id) values ('cust1', 1);
-insert into Customer_tbl (name, order_id) values ('cust2', 2);
-insert into Customer_tbl (name, order_id) values ('cust3', 3);
+insert into Customer_tbl (name, order_id) values ('Tom', 1);
+insert into Customer_tbl (name, order_id) values ('Eva', 2);
+insert into Customer_tbl (name, order_id) values ('Joe', 3);
 
 insert into Order_tbl (date, total, customer_id, OrderLine_id) values ('1-1-2019', 2600, 1, 1);
 insert into Order_tbl (date, total, customer_id, OrderLine_id) values ('2-1-2019', 15000, 2, 2);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ORM
 {
@@ -7,15 +8,39 @@ namespace ORM
         static void Main(string[] args)
         {
             CustomORM newOrm = new CustomORM();
-            var res = newOrm.Cquery("hej");
-            foreach (var item in res)
+
+            //list of queries take from assignment text, added extra for documentation
+            List<string> OrmStrs = new List<string>(){
+                "Customer",
+                "Customer.name",
+                "Product.name",
+                "(Customer|name='Joe')",
+                "(Product|name='Product3')",
+                "(Product|price > 200 and price < 600)",
+                "(Customer|name='Joe').Order",
+                "(Customer|name='Joe').Order.OrderLine",
+                "(Order| total > 14000).Customer"
+            };
+
+
+            foreach (var Ostr in OrmStrs)
             {
-                System.Console.WriteLine($"{item.Customer_id}-{item.name}");
-                    foreach (var listeitem in item.orders)
-                    {
-                        System.Console.WriteLine($"{listeitem.Order_id}-{listeitem.date}-{listeitem.total}");
-                    }
+                System.Console.WriteLine("------------------------------------------------------");
+                System.Console.WriteLine($"Testing ORM query : {Ostr}");
+                var res = newOrm.ExecuteQuery(Ostr);
+                System.Console.WriteLine("----------------------RESULT--------------------------");
+                foreach (var item in res)
+                {
+                    System.Console.WriteLine(item);
+                }
+                
             }
+            
+
+
+
+
+
         }
     }
 }

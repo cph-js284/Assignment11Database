@@ -35,7 +35,6 @@ namespace generator
             //Create database
             SQLFileBuilder(SQLFileName, SchemaName, "database");
 
-
             for (int i = ASize-1; i >= 0; i--)
             {
                 string tmpstr = Convert.ToString(DsrObj["entities"][i]);
