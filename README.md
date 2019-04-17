@@ -66,7 +66,8 @@ source ./Generated.sql;
 source ./inserts.sql;
 ```
 <br>
-That takes care of the MySql setup, you can exit out of the shell and container(leave it running) now
+That takes care of the MySql setup, you can exit out of the shell and container(leave it running) now<br>
+
 ## ORM Setup <br>
 
 1) Navigate to the ORM folder (placed in the root) and build the image
