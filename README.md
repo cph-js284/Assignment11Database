@@ -46,7 +46,7 @@ sudo docker run -d --rm --name mysql01 -p3306:3306 -e MYSQL_ROOT_PASSWORD=test12
 *Now we need to create the database and the tables by using the generated sql file.<br>
 Assuming you are still in the 'generator' folder, and assuming this is where you copied the generated files to <br>
 <br>
-For convenience I have created some [inserts.sql](https://github.com/cph-js284/Assignment11Database/blob/master/generator/inserts.sql) (this file is placed in the root of the 'generator' folder.)*
+For convenience I have created some [inserts.sql](https://github.com/cph-js284/Assignment11Database/blob/master/generator/inserts.sql) (this file is placed in the root of the 'generator' folder.)* <br>
 2) Copy the files into the MySql container
 ```
 sudo docker cp ./inserts.sql mysql01:/inserts.sql
