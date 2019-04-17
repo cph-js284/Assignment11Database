@@ -58,7 +58,7 @@ sudo docker exec -it mysql01 bash
 ```
 4) Enter MySql
 ```
-mysql -uroot -p test1234
+mysql -uroot -ptest1234
 ```
 5) Source the files
 ```
