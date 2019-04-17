@@ -66,7 +66,9 @@ source ./Generated.sql;
 source ./inserts.sql;
 ```
 <br>
-## ORM Setup
+That takes care of the MySql setup, you can exit out of the shell and container(leave it running) now
+## ORM Setup <br>
+
 1) Navigate to the ORM folder (placed in the root) and build the image
 ```
 sudo docker build -t orm01 .
