@@ -23,13 +23,15 @@ sudo docker run --name mygen01 generator
 ```
 *At this point the source file and sql have been created, but are still inside the generator(mygen01) container*<br>
 4) Extract the files from the container
+
+NB you might get a permission denied when doing this copy, if that is the case you can grant permission 
+```
+sudo chmod  a+rw .
+```
+Extracting
 ```
 sudo docker cp mygen01:/app/Generated.sql ./Generated.sql
 sudo docker cp mygen01:/app/Generated.cs ./Generated.cs
-```
-NB you might get a permission denied when doing this copy, if that is the case you can grant permission 
-```
-sudo chmod  a+rw
 ```
 *Alternatively you can run the generator container in detached mode (-d) and enter it using bash, and then copy out the 2 files to your host - or even better you can just check out the files here [Generated.sql](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.sql) and [Generated.cs](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.cs)* <br>
 <br>
