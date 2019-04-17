@@ -19,7 +19,13 @@ sudo docker build -t generator .
 ```
 3) Run the container
 ```
-sudo docker run
+sudo docker run --name mygen01 generator
 ```
-
+*At this point the source file and sql have been created, but are still inside the generator(mygen01) container*<br>
+4) Extract the files from the container
+```
+sudo docker cp mygen01:/app/Generated.sql ./Generated.sql
+sudo docker cp mygen01:/app/Generated.cs ./Generated.cs
+```
+NB you might get a permission denied when doing this copy
 
