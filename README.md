@@ -31,4 +31,4 @@ NB you might get a permission denied when doing this copy, if that is the case y
 ```
 sudo chmod  a+rw
 ```
-*Alternativly you can run the generator container indetached mode and enter it using bash and then copy out the 2 file, or even better you can just check out the files here [Generated.sql](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.sql) and [Generated.cs](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.cs)* <br>
+*Alternatively you can run the generator container in detached mode (-d) and enter it using bash, and then copy out the 2 files to your host - or even better you can just check out the files here [Generated.sql](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.sql) and [Generated.cs](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.cs)* <br>
