@@ -35,7 +35,7 @@ sudo docker cp mygen01:/app/Generated.cs ./Generated.cs
 ```
 *Alternatively you can run the generator container in detached mode (-d) and enter it using bash, and then copy out the 2 files to your host - or even better you can just check out the files here [Generated.sql](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.sql) and [Generated.cs](https://github.com/cph-js284/Assignment11Database/blob/master/Outputs/Generated.cs)* <br>
 <br>
-The source code for that generates these 2 files can be found here [Creator.cs](https://github.com/cph-js284/Assignment11Database/blob/master/generator/Creator.cs)<br>
+The source code that generates these 2 files can be found here [Creator.cs](https://github.com/cph-js284/Assignment11Database/blob/master/generator/Creator.cs)<br>
 <br>
 ## MySql Setup
 To use the ORM we need to set up a MySql database first:
@@ -80,7 +80,9 @@ The output from the ORM have been captured in the file [output.txt](https://gith
 ```
 sudo docker run --name ohohorm01 --link mysql01:mysql orm01
 ```
-
+<br>
+The source code that creates/executes the queries [CustomORM.cs](https://github.com/cph-js284/Assignment11Database/blob/master/ORM/CustomORM.cs) is located in the 'ORM' folder<br>
+<br>
 # Cleanup
 To remove the container 
 ```
