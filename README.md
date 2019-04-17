@@ -81,8 +81,10 @@ The output from the ORM have been captured in the file [output.txt](https://gith
 sudo docker run --name ohohorm01 --link mysql01:mysql orm01
 ```
 <br>
-The source code that creates/executes the queries [CustomORM.cs](https://github.com/cph-js284/Assignment11Database/blob/master/ORM/CustomORM.cs) is located in the 'ORM' folder<br>
+
+The source code that creates/executes the queries [customORM.cs](https://github.com/cph-js284/Assignment11Database/blob/master/ORM/CustomORM.cs) is located in the 'ORM' folder<br>
 <br>
+
 # Cleanup
 To remove the container 
 ```
